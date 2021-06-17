@@ -1,6 +1,6 @@
 import './App.css';
 import styled from "@emotion/styled"
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, HashRouter, Switch } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core";
 import theme from './theme/theme';
 import PokemonList from './pages/PokemonList';
@@ -12,7 +12,7 @@ import MenuBar from "./components/MenuBar";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <ThemeProvider theme={theme}>
           <Alpha>
             <MenuBar>
@@ -33,7 +33,7 @@ function App() {
             </MenuBar>
           </Alpha>
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
